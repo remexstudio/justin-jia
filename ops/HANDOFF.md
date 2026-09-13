@@ -6,7 +6,7 @@
 
 ## SHA
 
-`PENDING` — `feat(site): motion a11y 404 and polish`
+`a65f318378a9909fa9dfa1de18ae0b93c39ffa74` (`a65f318`) — `feat(site): motion a11y 404 and polish`
 
 ## Skills used
 
