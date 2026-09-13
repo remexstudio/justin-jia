@@ -1,4 +1,4 @@
-# HANDOFF — P1
+# HANDOFF — P2
 
 ## DEV verdict
 
@@ -6,44 +6,42 @@
 
 ## SHA
 
-`6d98fe281c2fefc77b66ce879bd7b8f3683d7e43` (`6d98fe2`) — `feat(site): add home layout and hero`
+(pending commit — filled after push)
 
 ## Skills used
 
-- frontend-design (letter layout, Literata, one memorable lede, no Inter/card/eyebrow defaults)
-- emil-design-eng (press scale 0.97, explicit transitions, hover behind fine pointer, no entrance cascade)
-- apple-design (system-adjacent optical sizing, skip link, reduced-motion, size-specific tracking, safe areas)
-- writing-guidelines (locked hero only; no invented titles or metrics; English UI)
-- web-design-guidelines (semantic header/nav/main/footer, focus-visible, Link for internal CTAs, skip to `#main`)
+- frontend-design (letter measure, sequence markers only on path beats, no card/skill-bar/eyebrow defaults, Literata continuity)
+- emil-design-eng (reuse existing CTA press/hover; no entrance stagger; explicit transitions already in chrome)
+- apple-design (readable leading/measure, sentence-case hierarchy, safe areas via shared chrome, no motion on content)
+- writing-guidelines (present tense on /now; active voice; no em dashes in new copy; no easy/simple/quick; no invented employers/dates/metrics)
+- web-design-guidelines (semantic `ol`/`h1`/`h2`, Link for internal CTAs, translate="no" on Remex Studio, tabular-nums on beat index, text-pretty on headings)
 
 ## What shipped
 
-- Home letter: name, role, locked hero (em dash), founder line, two CTAs
-- Outbound Remex Studio → https://remex-atelier.vercel.app
-- Shared chrome: skip link, six-route nav, Bellevue footer
-- Paper/ink tokens and type roles expanded in CSS and `docs/design.md`
-- Sitemap marks `/` as P1 shipped
+- `/now`: present-tense letter — building Remex Studio (English lockup + atelier outbound), looking for AI Product Manager roles, explicit not selling cloud-migration outsourcing
+- `/path`: four beats (engineer shipping → cloud/microservices permissions-cost-operability → consultative brief intake → why AI PM); quiet `01`–`04` sequence markers; no employers/dates
+- Shared home chrome unchanged (SiteHeader/SiteFooter/layout); home hero untouched
+- `docs/sitemap.md` marks `/now` and `/path` as P2 shipped
+- Ops backlog/status/handoff updated
 
 ## Acceptance
 
-- [x] `/` shows name Justin Jia; role AI Product Manager; hero verbatim including em dash; sub Founder, Remex Studio.
-- [x] Outbound link to https://remex-atelier.vercel.app labeled Remex Studio
-- [x] CTAs: Read the path → `/path`; View selected work → `/work`
-- [x] No skill bars, scorecards, or fake percentages
-- [x] Nav covers the six routes; English only; focus-visible on links
-- [x] Paper/ink tokens expanded; type readable at 375 and 1280 intent
-- [x] `pnpm build` passes
-- [x] Commit message: `feat(site): add home layout and hero`
-- [x] Person-not-company; Literata letter, not remex-atelier chrome
+- [x] `/now` present tense: building Remex Studio (never 机羽云 in UI); looking for AI PM roles; explicitly not selling cloud-migration outsourcing
+- [x] `/path` four beats without invented employers/dates
+- [x] No skill bars; short specific English; atelier-adjacent human letter tone
+- [x] `pnpm build` passes; headings + readable measure (`max-w-2xl`, ~38–42ch prose)
+- [x] Commit message: `feat(site): add now and path`
+- [x] English only; no phone; no fake percentages
 
 ## Risks / blockers
 
-- **Preview**: Vercel project may still be unlinked; no preview URL in this slice. Visual Leader review may need a local or later deploy.
-- Stub routes (`/now` `/path` `/work` `/writing` `/contact`) now sit under shared chrome; their inner padding is unchanged until later phases.
-- Motion polish remains P6.
+- **Preview**: Vercel project still unlinked; Leader visual review may need local or later deploy.
+- Quiet `01`–`04` markers are intentional (path is a sequence); if Leader prefers unmarked prose sections, easy rework.
+- `/work` CTA on path still lands on P3 stub.
 
 ## Out of scope (confirmed untouched)
 
 - remex-atelier
-- Full /now /path copy, work cards, writing, contact polish, 404 motion
-- Phone, Chinese UI, purple/neon, skill bars
+- Home hero / layout chrome beyond consuming existing header/footer
+- /work cards, /writing, /contact polish, motion/404 (P3–P6)
+- Phone, Chinese UI, purple/neon, skill bars, fake metrics
