@@ -6,7 +6,7 @@
 
 ## SHA
 
-Pending stamp after `feat(site): add home layout and hero`.
+`6d98fe281c2fefc77b66ce879bd7b8f3683d7e43` (`6d98fe2`) — `feat(site): add home layout and hero`
 
 ## Skills used
 
