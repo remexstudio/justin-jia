@@ -4,7 +4,7 @@ Six English routes plus a not-found surface.
 
 | Path | Purpose | Phase |
 | --- | --- | --- |
-| `/` | Home: wordmark + hero (P1) | P0 shell, P1 polish |
+| `/` | Home: name, role, locked hero, studio outbound, path and work CTAs | P1 shipped |
 | `/now` | Current focus | P0 shell, P2 copy |
 | `/path` | Background and trajectory | P0 shell, P2 copy |
 | `/work` | Selected work + studio outbound | P0 shell, P3 |

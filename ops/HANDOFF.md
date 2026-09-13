@@ -1,4 +1,4 @@
-# HANDOFF — P0
+# HANDOFF — P1
 
 ## DEV verdict
 
@@ -6,49 +6,44 @@
 
 ## SHA
 
-`255162689ba5818cbfc2515bfa69ef57cf13619c` (`2551626`) — `chore(repo): initialize personal site`
+Pending stamp after `feat(site): add home layout and hero`.
 
 ## Skills used
 
-- frontend-design (paper/ink token stub, system type, no Inter/Geist template)
-- emil-design-eng (no motion in P0; restraint)
-- apple-design (system type, feedback restraint, reduced-motion deferred to P6)
-- writing-guidelines (English constitution docs; ellipsis; no banned filler on stubs)
-- web-design-guidelines (semantic `main`, `lang="en"`, Link for 404 home)
+- frontend-design (letter layout, Literata, one memorable lede, no Inter/card/eyebrow defaults)
+- emil-design-eng (press scale 0.97, explicit transitions, hover behind fine pointer, no entrance cascade)
+- apple-design (system-adjacent optical sizing, skip link, reduced-motion, size-specific tracking, safe areas)
+- writing-guidelines (locked hero only; no invented titles or metrics; English UI)
+- web-design-guidelines (semantic header/nav/main/footer, focus-visible, Link for internal CTAs, skip to `#main`)
 
 ## What shipped
 
-- Next.js App Router + TypeScript + Tailwind v4 + pnpm scaffold
-- Minimal route shells: `/` `/now` `/path` `/work` `/writing` `/contact`
-- Minimal English `not-found`
-- Constitution: README, AGENTS, docs/brand, docs/sitemap, docs/design
-- Ops: BACKLOG P0 checked; STATUS phase P0; HANDOFF filled
-- Home: wordmark + “Initializing…” only (full hero locked in brand.md for P1)
+- Home letter: name, role, locked hero (em dash), founder line, two CTAs
+- Outbound Remex Studio → https://remex-atelier.vercel.app
+- Shared chrome: skip link, six-route nav, Bellevue footer
+- Paper/ink tokens and type roles expanded in CSS and `docs/design.md`
+- Sitemap marks `/` as P1 shipped
 
 ## Acceptance
 
+- [x] `/` shows name Justin Jia; role AI Product Manager; hero verbatim including em dash; sub Founder, Remex Studio.
+- [x] Outbound link to https://remex-atelier.vercel.app labeled Remex Studio
+- [x] CTAs: Read the path → `/path`; View selected work → `/work`
+- [x] No skill bars, scorecards, or fake percentages
+- [x] Nav covers the six routes; English only; focus-visible on links
+- [x] Paper/ink tokens expanded; type readable at 375 and 1280 intent
 - [x] `pnpm build` passes
-- [x] Six routes + not-found exist
-- [x] English README + AGENTS + brand + sitemap + design
-- [x] brand.md locks (name, Bellevue, AI PM, hero verbatim, Founder Remex Studio, contacts, tone, forbids)
-- [x] sitemap six routes; design paper/ink; person-not-company
-- [x] BACKLOG P0–P6; STATUS P0; HANDOFF filled
-- [x] No Chinese on ship surfaces
-- [x] Commit message: `chore(repo): initialize personal site`
-
-## Extras beyond strict allowlist (scaffold necessities)
-
-- `pnpm-workspace.yaml` (create-next-app / pnpm)
-- `next-env.d.ts` (gitignored; generated)
-- `app/favicon.ico` (Next default location; not `public/favicon.ico`)
-- Empty `public/` directory
+- [x] Commit message: `feat(site): add home layout and hero`
+- [x] Person-not-company; Literata letter, not remex-atelier chrome
 
 ## Risks / blockers
 
-- **Preview**: Vercel project may not be linked yet; no preview URL in this slice. Blocker for visual Leader review until linked.
-- P0 shells are intentionally unpolished; do not treat as P1 hero.
-- Tailwind v4 + Next 16.3.5: watch token wiring when P1 expands design system.
+- **Preview**: Vercel project may still be unlinked; no preview URL in this slice. Visual Leader review may need a local or later deploy.
+- Stub routes (`/now` `/path` `/work` `/writing` `/contact`) now sit under shared chrome; their inner padding is unchanged until later phases.
+- Motion polish remains P6.
 
 ## Out of scope (confirmed untouched)
 
-- Polished hero, full route copy, motion, remex-atelier, phone, fake titles, Chinese UI, purple/neon
+- remex-atelier
+- Full /now /path copy, work cards, writing, contact polish, 404 motion
+- Phone, Chinese UI, purple/neon, skill bars

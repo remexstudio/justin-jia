@@ -1,5 +1,14 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { Literata } from "next/font/google";
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
 import "./globals.css";
+
+const literata = Literata({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-letter",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -10,14 +19,29 @@ export const metadata: Metadata = {
     "Justin Jia: AI Product Manager in Bellevue, Washington. Founder, Remex Studio.",
 };
 
+export const viewport: Viewport = {
+  themeColor: "#f7f4ef",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="min-h-dvh antialiased">{children}</body>
+    <html lang="en" className={literata.variable}>
+      <body
+        className={`${literata.className} flex min-h-dvh flex-col antialiased`}
+      >
+        <a href="#main" className="skip-link">
+          Skip to content
+        </a>
+        <SiteHeader />
+        <div id="main" className="flex-1">
+          {children}
+        </div>
+        <SiteFooter />
+      </body>
     </html>
   );
 }

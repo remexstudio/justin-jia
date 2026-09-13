@@ -1,28 +1,212 @@
 @import "tailwindcss";
 
 :root {
-  /* Paper / ink tokens (stub: expand in P1) */
+  /* Paper / ink — personal letter, not studio chrome */
   --paper: #f7f4ef;
+  --paper-shade: #efebe4;
   --ink: #1a1917;
   --ink-muted: #5c5954;
-  --rule: #e4e0d8;
+  --ink-faint: #8a857c;
+  --rule: #d9d4cb;
   --background: var(--paper);
   --foreground: var(--ink);
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --duration-press: 160ms;
+  --duration-ui: 200ms;
+
+  color-scheme: light;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-paper: var(--paper);
+  --color-paper-shade: var(--paper-shade);
   --color-ink: var(--ink);
   --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
   --color-rule: var(--rule);
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  --font-serif: var(--font-letter), ui-serif, Georgia, "Iowan Old Style",
+    "Palatino Linotype", Palatino, serif;
+  --ease-out: var(--ease-out);
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --paper: #ffffff;
+    --paper-shade: #f3f3f3;
+    --ink: #000000;
+    --ink-muted: #333333;
+    --ink-faint: #444444;
+    --rule: #000000;
+  }
+}
+
+html {
+  background: var(--paper);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-letter), ui-serif, Georgia, "Iowan Old Style",
+    "Palatino Linotype", Palatino, serif;
+  font-optical-sizing: auto;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+}
+
+.letter-lede {
+  font-optical-sizing: auto;
+  font-size: clamp(1.375rem, 0.95rem + 2vw, 2rem);
+  font-weight: 400;
+  line-height: 1.28;
+  letter-spacing: -0.018em;
+  text-wrap: pretty;
+}
+
+.letter-name {
+  font-optical-sizing: auto;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.letter-role {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--ink-muted);
+}
+
+.letter-quiet {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+
+.site-nav {
+  font-size: 0.9375rem;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 0.18em;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgb(26 25 23 / 0.12);
+}
+
+a[href]:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.nav-link {
+  color: var(--ink-muted);
+  text-decoration: none;
+  transition: color var(--duration-ui) ease;
+}
+
+.nav-link[aria-current="page"] {
+  color: var(--ink);
+}
+
+.cta {
+  display: inline-block;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition:
+    transform var(--duration-press) var(--ease-out),
+    text-decoration-thickness var(--duration-ui) ease,
+    color var(--duration-ui) ease;
+}
+
+.cta:active {
+  transform: scale(0.97);
+}
+
+.studio-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition:
+    text-decoration-thickness var(--duration-ui) ease,
+    color var(--duration-ui) ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .nav-link:hover {
+    color: var(--ink);
+  }
+
+  .cta:hover,
+  .studio-link:hover {
+    text-decoration-thickness: 2px;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 20;
+  padding: 0.4rem 0.7rem;
+  background: var(--paper);
+  color: var(--ink);
+  transform: translateY(-160%);
+  transition: transform var(--duration-ui) var(--ease-out);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.skip-link:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta,
+  .nav-link,
+  .studio-link,
+  .skip-link {
+    transition: none;
+  }
+
+  .cta:active {
+    transform: none;
+  }
+
+  .skip-link {
+    opacity: 0;
+    transform: none;
+    pointer-events: none;
+  }
+
+  .skip-link:focus {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+@media (max-width: 374px) {
+  .letter-lede {
+    font-size: 1.25rem;
+  }
+
+  .site-nav {
+    font-size: 0.875rem;
+  }
 }
