@@ -1,4 +1,4 @@
-# HANDOFF — P2
+# HANDOFF — P3
 
 ## DEV verdict
 
@@ -6,42 +6,51 @@
 
 ## SHA
 
-`8d44e875c119db8ac2b305623ae42583b9cb1715` (`8d44e87`) — `feat(site): add now and path`
+(stamp after commit)
 
 ## Skills used
 
-- frontend-design (letter measure, sequence markers only on path beats, no card/skill-bar/eyebrow defaults, Literata continuity)
-- emil-design-eng (reuse existing CTA press/hover; no entrance stagger; explicit transitions already in chrome)
-- apple-design (readable leading/measure, sentence-case hierarchy, safe areas via shared chrome, no motion on content)
-- writing-guidelines (present tense on /now; active voice; no em dashes in new copy; no easy/simple/quick; no invented employers/dates/metrics)
-- web-design-guidelines (semantic `ol`/`h1`/`h2`, Link for internal CTAs, translate="no" on Remex Studio, tabular-nums on beat index, text-pretty on headings)
+- frontend-design (letter measure continuity; stacked rule sections instead of SaaS card grid/shadows; no tracked eyebrows or skill bars; Literata hierarchy matches /now /path)
+- emil-design-eng (reuse existing `.cta` press/hover; no entrance stagger; no decorative motion on content)
+- apple-design (readable leading/measure ~42ch, sentence-case labels, focus via shared chrome, reduced-motion already on CTAs)
+- writing-guidelines (active voice; no em dashes; no easy/simple/quick; no Lead PM / fake tenure; clear outbound anchor text)
+- web-design-guidelines (semantic `h1`/`h2`/`dl`/`article`, `rel="noopener noreferrer"` + `target="_blank"` on outbound studies, `translate="no"` on Remex Studio)
 
 ## What shipped
 
-- `/now`: present-tense letter — building Remex Studio (English lockup + atelier outbound), looking for AI Product Manager roles, explicit not selling cloud-migration outsourcing
-- `/path`: four beats (engineer shipping → cloud/microservices permissions-cost-operability → consultative brief intake → why AI PM); quiet `01`–`04` sequence markers; no employers/dates
-- Shared home chrome unchanged (SiteHeader/SiteFooter/layout); home hero untouched
-- `docs/sitemap.md` marks `/now` and `/path` as P2 shipped
+- `/work`: four selected-work cards (Problem / Constraints / What shipped / Next cut)
+- Page framing: Product work directed at Remex Studio (studio studies, not employment claims)
+- Card 1 Beauty try-on to checkout → lumen-atelier
+- Card 2 Warehouse knowledge with approval gates → northline
+- Card 3 Morning brief, not a dashboard → kite
+- Card 4 Ecommerce exception queue → paperline
+- One Kafka capability line on card 4 only
+- Clear outbound link text: View studio study
+- `docs/sitemap.md` marks `/work` P3 shipped
 - Ops backlog/status/handoff updated
 
 ## Acceptance
 
-- [x] `/now` present tense: building Remex Studio (never 机羽云 in UI); looking for AI PM roles; explicitly not selling cloud-migration outsourcing
-- [x] `/path` four beats without invented employers/dates
-- [x] No skill bars; short specific English; atelier-adjacent human letter tone
-- [x] `pnpm build` passes; headings + readable measure (`max-w-2xl`, ~38–42ch prose)
-- [x] Commit message: `feat(site): add now and path`
-- [x] English only; no phone; no fake percentages
+- [x] Four cards with Problem / Constraints / What shipped / Next cut
+- [x] Framing: Product work directed at Remex Studio (not employment)
+- [x] Card 1 → https://remex-atelier.vercel.app/work/lumen-atelier
+- [x] Card 2 → https://remex-atelier.vercel.app/work/northline
+- [x] Card 3 → https://remex-atelier.vercel.app/work/kite
+- [x] Card 4 → https://remex-atelier.vercel.app/work/paperline
+- [x] Kafka capability line on card 4 only (not a fifth card)
+- [x] No real brand logos; anonymized product language; clear link text
+- [x] `pnpm build` passes; measure readable at 375/1280 intent (`max-w-2xl`, ~42ch)
+- [x] Commit: `feat(work): add selected work and studio outbound links`
 
 ## Risks / blockers
 
 - **Preview**: Vercel project still unlinked; Leader visual review may need local or later deploy.
-- Quiet `01`–`04` markers are intentional (path is a sequence); if Leader prefers unmarked prose sections, easy rework.
-- `/work` CTA on path still lands on P3 stub.
+- Card 2 public title follows TASK warehouse framing while the studio study titles as ledger clerk; content aligns on citations + Propose/Approve gates.
+- Outbound studies open in a new tab; if Leader prefers same-tab, one-line change.
 
 ## Out of scope (confirmed untouched)
 
 - remex-atelier
-- Home hero / layout chrome beyond consuming existing header/footer
-- /work cards, /writing, /contact polish, motion/404 (P3–P6)
-- Phone, Chinese UI, purple/neon, skill bars, fake metrics
+- Home /now /path chrome beyond consuming shared header/footer
+- /writing, /contact polish, motion/404 (P4–P6)
+- Phone, Chinese UI, purple/neon, skill bars, fake metrics, Lead PM titles
