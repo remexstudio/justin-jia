@@ -1,27 +1,26 @@
-# Review P0
+# Review P1
 
-- TASK ID: P0
-- Delivery SHA: 255162689ba5818cbfc2515bfa69ef57cf13619c
-- Tip: 7c0836e
+- TASK ID: P1
+- Delivery SHA: 6d98fe281c2fefc77b66ce879bd7b8f3683d7e43
+- Tip: 3cf31d5
 
 ## Acceptance
 
 | Criterion | Result |
 | --- | --- |
-| `pnpm build` (six routes) | PASS |
-| Placeholders `/` `/now` `/path` `/work` `/writing` `/contact` + not-found | PASS |
-| English README, AGENTS, brand, sitemap, design | PASS |
-| brand.md locks (name, Bellevue, AI PM, hero verbatim, Founder, contacts, forbids) | PASS |
-| paper/ink; person-not-company; no purple/neon | PASS |
-| BACKLOG P0–P6; HANDOFF filled | PASS |
-| No Chinese on ship surfaces | PASS |
+| Name + AI Product Manager | PASS |
+| Hero verbatim (em dash) | PASS |
+| Founder, Remex Studio → remex-atelier.vercel.app | PASS |
+| CTA Read the path / View selected work | PASS |
+| Six-route chrome; focus-visible; skip link | PASS |
+| No skill bars / scorecards / Chinese / purple | PASS |
+| `pnpm build` | PASS |
 | remex-atelier untouched | PASS |
-| Commit `chore(repo): initialize personal site` | PASS |
 
 ## Notes
 
-- Preview missing is acceptable for P0 (Vercel not linked). Link/deploy by P5/P6 or when convenient; not a content blocker.
-- Home correctly deferred full hero to P1.
+- Preview still unlinked; acceptable until P5/P6 deploy.
+- Letter tone (Literata) correctly differs from studio chrome.
 
 ## Verdict
 

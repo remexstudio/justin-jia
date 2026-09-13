@@ -1,35 +1,33 @@
-# TASK P1
+# TASK P2
 
-TASK ID: P1
+TASK ID: P2
 REPO: remexstudio/justin-jia
-GOAL: Ship home layout and hero for Justin Jia personal site. Recruiter-facing, person-not-company. Atelier-adjacent but more human — not a copy-paste of remex-atelier.
+GOAL: Ship `/now` and `/path` copy. Present tense on /now; four-beat path narrative. Person-not-company. English only.
 
 ALLOWED FILES:
-- app/page.tsx
-- app/layout.tsx
-- app/globals.css
-- components/** (new shared chrome/nav/footer if needed for home)
-- docs/design.md (expand tokens/type if home requires)
-- docs/sitemap.md (mark home as P1 shipped)
+- app/now/page.tsx
+- app/path/page.tsx
+- components/** (only if shared section helpers needed for these pages)
+- docs/sitemap.md (mark now/path shipped)
 - ops/HANDOFF.md, ops/STATUS.md, ops/BACKLOG.md (handoff only)
 
 OUT OF SCOPE:
-- Full /now /path copy (P2)
-- /work cards (P3), /writing (P4), /contact polish (P5)
-- Motion polish / 404 atelier polish (P6)
-- Skill bars, scorecards, fake metrics, phone, Chinese UI
-- Any change to remexstudio/remex-atelier
-- Purple gradients, neon SaaS, Inter-template look
+- /work cards (P3), /writing (P4), /contact polish (P5), motion/404 (P6)
+- Invented employers, exact dates, fake metrics, phone, Chinese UI
+- Selling cloud-migration outsourcing
+- Changes to remexstudio/remex-atelier
+- Home hero changes (locked)
 
 ACCEPTANCE:
-- [ ] `/` shows: name **Justin Jia**; role **AI Product Manager**; hero **verbatim** `I design AI agents as products — after years building the systems they have to live on.`; sub **Founder, Remex Studio.**
-- [ ] Outbound link to Remex Studio (https://remex-atelier.vercel.app) — label clear, opens studio; this is outbound only
-- [ ] CTAs: **Read the path** → `/path` and **View selected work** → `/work`
-- [ ] No skill bars, no report-card / resume checklist UI
-- [ ] Site chrome (nav) covers the six routes without clutter; English only
-- [ ] Paper/ink tokens expanded enough for home; type roles readable at 375 and 1280 intent
-- [ ] `pnpm build` passes; focus-visible on interactive links
-- [ ] Commit: `feat(site): add home layout and hero`
+- [ ] `/now`: present tense — building Remex Studio (机羽云 may appear only in docs if needed; **English UI**: say Remex Studio); looking for AI PM roles; explicitly not selling cloud-migration outsourcing
+- [ ] `/path`: four beats without invented employers/dates:
+  1. Engineer shipping product
+  2. Cloud and microservices (permissions / cost / operability)
+  3. Consultative brief intake
+  4. Why AI Product Manager
+- [ ] No skill bars; short specific English; atelier-adjacent human tone
+- [ ] `pnpm build` passes; headings + readable measure
+- [ ] Commit: `feat(site): add now and path`
 
 SKILLS TO USE (read before code):
 - frontend-design
@@ -38,8 +36,8 @@ SKILLS TO USE (read before code):
 - writing-guidelines
 - web-design-guidelines
 
-COMMIT MESSAGE: feat(site): add home layout and hero
+COMMIT MESSAGE: feat(site): add now and path
 
-COPY LOCKS:
-- Hero must match brand.md character-for-character (including the em dash).
-- Do not invent employers, dates, or percentages on home.
+COPY NOTES:
+- Chinese 机羽云 must not appear in UI; Remex Studio is the English lockup.
+- Do not name real past employers or invent tenure dates.
