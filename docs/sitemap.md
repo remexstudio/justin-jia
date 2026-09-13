@@ -9,7 +9,7 @@ Six English routes plus a not-found surface.
 | `/path` | Four-beat trajectory without employers or dates | P2 shipped |
 | `/work` | Selected work + studio outbound | P3 shipped |
 | `/writing` | Judgment notes | P4 shipped |
-| `/contact` | Email and profiles | P0 shell, P5 |
+| `/contact` | Email and profiles | P5 shipped |
 | `not-found` | English 404 | P0 minimal, P6 polish |
 
 No other public routes in scope through P6.

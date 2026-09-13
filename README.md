@@ -29,6 +29,20 @@ pnpm start
 
 `/` `/now` `/path` `/work` `/writing` `/contact`
 
+## Contact
+
+- Email: hello@remexstudio.com
+- LinkedIn: https://www.linkedin.com/in/justin-jia (placeholder)
+- GitHub: https://github.com/qinlinj and https://github.com/remexstudio
+- X: @QinlinJ
+- Resume: PDF coming (no file in repo)
+
+## Preview
+
+Production alias: https://justin-jia.vercel.app (qinlinj-projects / file deploy).
+
+Git link of remexstudio/justin-jia is blocked: Vercel user qinlinj lacks write/admin on that repo (`repo_no_access`). Pushes to GitHub do not auto-deploy until that access exists.
+
 ## Docs
 
 - [Brand](docs/brand.md)

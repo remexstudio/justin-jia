@@ -1,4 +1,4 @@
-# HANDOFF — P4
+# HANDOFF — P5
 
 ## DEV verdict
 
@@ -6,45 +6,44 @@
 
 ## SHA
 
-`6ac603b30910e9c7deabe427ab8482ae83f66659` (`6ac603b`) — `feat(writing): add two judgment notes`
+Pending stamp after `feat(site): add contact and metadata` lands on origin/main.
 
 ## Skills used
 
-- frontend-design (letter measure continuity; stacked rule sections instead of card grid/shadows; no tracked eyebrows; Literata hierarchy matches /work /path /now)
-- emil-design-eng (reuse existing `.cta` press/hover; no entrance stagger; no decorative motion on notes)
-- apple-design (readable leading/measure ~42ch, sentence-case headings, focus via shared chrome, reduced-motion already on CTAs)
-- writing-guidelines (active voice; no em dashes; no easy/simple/quick; no fake employment; judgment tone, not listicle)
-- web-design-guidelines (semantic `h1`/`h2`/`article`/`ul`, single index page, clear CTA anchor text)
+- frontend-design (letter measure; stacked rule rows, not card grid/shadows; no tracked eyebrows; email is the one loud CTA)
+- emil-design-eng (reuse `.cta` press/hover; no entrance stagger; no toast)
+- apple-design (sentence-case headings, ~42ch quiet line, ink focus ring via shared chrome, reduced-motion already on CTAs)
+- writing-guidelines (active voice; no em dashes; no easy/simple/quick; no phone; LinkedIn labeled placeholder; resume honesty)
+- web-design-guidelines (semantic `h1`/`dl`, skip link, focus-visible, named anchors not bare URLs)
+- ask-sonner: N/A (mailto-only; no copy toast)
 
 ## What shipped
 
-- `/writing`: three short English judgment notes on one index page (no MDX)
-- Note 1: When you should not build an Agent
-- Note 2: Approval gates are the product
-- Note 3: How systems experience constrains Agents
-- Page framing: Short notes on judgment. Not a blog.
-- CTA to `/work`
-- `docs/sitemap.md` marks `/writing` P4 shipped
+- `/contact`: email mailto, LinkedIn placeholder, both GitHubs, X handle as text, PDF coming
+- Root metadata: title/description, Open Graph, Twitter, `metadataBase` https://justin-jia.vercel.app
+- File deploy under qinlinj-projects as project `justin-jia`
+- `docs/sitemap.md` marks `/contact` P5 shipped
 - Ops backlog/status/handoff updated
 
 ## Acceptance
 
-- [x] `/writing` lists 2–3 English judgment notes with readable bodies (three shipped)
-- [x] Tone: letter / judgment, not LinkedIn listicle or "unleash AI"
-- [x] No fake employment claims; no Chinese UI; no purple/neon chrome
-- [x] Health-monitoring not claimed (not mentioned)
-- [x] `pnpm build` passes; measure readable at 375/1280 intent (`max-w-2xl`, ~42ch)
-- [x] Commit: `feat(writing): add two judgment notes`
+- [x] `/contact` lists email, LinkedIn (placeholder), GitHub qinlinj + remexstudio, X @QinlinJ
+- [x] No phone; resume is “PDF coming” (no file invented)
+- [x] Root metadata + `metadataBase` for public URL
+- [x] Preview/production: https://justin-jia.vercel.app (file deploy). Git link blocked (`repo_no_access`)
+- [x] Labels / focus-visible / English only
+- [x] `pnpm build` passes
+- [x] Commit: `feat(site): add contact and metadata`
 
 ## Risks / blockers
 
-- **Preview**: Vercel project still unlinked; Leader visual review may need local or later deploy.
-- Commit message says "two" notes; page ships **three** short notes per TASK preference (three short over two long).
-- Notes are index-only; no per-note routes. Add routes later only if Leader asks.
+- **Git auto-deploy blocked**: `create_git_project` and `vercel git connect` fail with `repo_no_access`. Vercel auth is qinlinj; repo is remexstudio/justin-jia. qinlinj needs write/admin, or a remexstudio team, before pushes deploy themselves.
+- First CLI deploy created the project and assigned production. Future CLI deploys without `--prod` are previews unless Git is linked.
+- LinkedIn URL is labeled placeholder; do not treat it as verified.
 
 ## Out of scope (confirmed untouched)
 
 - remex-atelier
-- Home /now /path /work chrome beyond consuming shared header/footer
-- /contact polish, motion/404 (P5–P6)
-- Phone, Chinese UI, purple/neon, skill bars, fake metrics, Lead PM titles
+- Home /now /path /work /writing chrome beyond consuming shared header/footer
+- Motion / 404 polish (P6)
+- Phone, Chinese UI, purple/neon, skill bars, fake resume PDF, sonner

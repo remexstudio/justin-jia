@@ -10,13 +10,30 @@ const literata = Literata({
   variable: "--font-letter",
 });
 
+const description =
+  "Justin Jia: AI Product Manager in Bellevue, Washington. Founder, Remex Studio.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://justin-jia.vercel.app"),
   title: {
     default: "Justin Jia",
     template: "%s · Justin Jia",
   },
-  description:
-    "Justin Jia: AI Product Manager in Bellevue, Washington. Founder, Remex Studio.",
+  description,
+  openGraph: {
+    title: "Justin Jia · AI Product Manager",
+    description,
+    url: "/",
+    type: "website",
+    locale: "en_US",
+    siteName: "Justin Jia",
+  },
+  twitter: {
+    card: "summary",
+    title: "Justin Jia · AI Product Manager",
+    description,
+    creator: "@QinlinJ",
+  },
 };
 
 export const viewport: Viewport = {

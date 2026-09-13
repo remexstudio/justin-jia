@@ -1,6 +1,6 @@
 # Status
 
-- Phase: P4 PASS; P5 issued
-- Closed: P0–P4 (P4 SHA 6ac603b)
+- Phase: P5 PASS
+- Closed: P0–P5
 - Repo: https://github.com/remexstudio/justin-jia
-- Preview: not linked yet — target link/deploy in P5 or P6
+- Preview: https://justin-jia.vercel.app (qinlinj-projects file deploy; Git link blocked)
