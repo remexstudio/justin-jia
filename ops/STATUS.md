@@ -1,9 +1,8 @@
 # Status
 
-- Phase: P0 delivered (awaiting Leader review)
-- SHA: `255162689ba5818cbfc2515bfa69ef57cf13619c`
+- Phase: P0 PASS; P1 issued
+- Closed: P0 (SHA 255162689ba5818cbfc2515bfa69ef57cf13619c)
 - Repo: https://github.com/remexstudio/justin-jia
-- Studio (closed, separate): https://github.com/remexstudio/remex-atelier
-- Rule: no studio→personal links; personal may outbound to studio studies
-- DoD: six English routes live; real name; hero verbatim (locked in brand.md); outbound studio only; no fake titles; 375/1280 later; English README
-- Preview: not linked / unknown until Vercel project connected
+- Studio (closed, separate): https://github.com/remexstudio/remex-atelier — do not add personal inbound links there
+- Preview: not linked yet
+- DoD progress: scaffold green; hero/copy/work/writing/contact/polish remaining

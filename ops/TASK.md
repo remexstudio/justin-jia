@@ -1,56 +1,45 @@
-# TASK P0
+# TASK P1
 
-TASK ID: P0
+TASK ID: P1
 REPO: remexstudio/justin-jia
-GOAL: Initialize Justin Jia personal site repo — Next.js App Router + TypeScript + Tailwind, English constitution docs, empty route shells only (no polished hero yet), ops loop files, first commit. Recruiter-facing personal site (depth LinkedIn), not a second company site, not a green-wall resume.
+GOAL: Ship home layout and hero for Justin Jia personal site. Recruiter-facing, person-not-company. Atelier-adjacent but more human — not a copy-paste of remex-atelier.
 
 ALLOWED FILES:
-- package.json, pnpm-lock.yaml, tsconfig.json, next.config.*, postcss.config.*, eslint.config.*, .gitignore
-- app/layout.tsx, app/page.tsx (minimal placeholder only), app/globals.css (tokens stub ok)
-- app/now/page.tsx, app/path/page.tsx, app/work/page.tsx, app/writing/page.tsx, app/contact/page.tsx (minimal placeholders: title + one line each)
-- app/not-found.tsx (minimal English 404)
-- README.md (English scaffold)
-- AGENTS.md
-- docs/brand.md, docs/sitemap.md, docs/design.md
-- ops/TASK.md, ops/HANDOFF.md, ops/REVIEW.md, ops/BACKLOG.md, ops/STATUS.md
-- public/favicon.ico (or default)
+- app/page.tsx
+- app/layout.tsx
+- app/globals.css
+- components/** (new shared chrome/nav/footer if needed for home)
+- docs/design.md (expand tokens/type if home requires)
+- docs/sitemap.md (mark home as P1 shipped)
+- ops/HANDOFF.md, ops/STATUS.md, ops/BACKLOG.md (handoff only)
 
 OUT OF SCOPE:
-- Polished home hero / CTAs (P1)
 - Full /now /path copy (P2)
-- /work cards and studio outbound links (P3)
-- /writing notes (P4)
-- Contact links polish + metadata/OG (P5)
-- Motion, a11y polish beyond basic, 404 atelier polish (P6)
+- /work cards (P3), /writing (P4), /contact polish (P5)
+- Motion polish / 404 atelier polish (P6)
+- Skill bars, scorecards, fake metrics, phone, Chinese UI
 - Any change to remexstudio/remex-atelier
-- Phone numbers, fake resume PDF, fake job titles, Chinese UI
 - Purple gradients, neon SaaS, Inter-template look
 
 ACCEPTANCE:
-- [ ] Repo remexstudio/justin-jia builds with `pnpm build`
-- [ ] Routes exist (even placeholder): `/` `/now` `/path` `/work` `/writing` `/contact`
-- [ ] English README + AGENTS.md + docs/brand.md + docs/sitemap.md + docs/design.md
-- [ ] brand.md locks: Justin Jia; Bellevue, Washington; AI Product Manager; hero verbatim; Founder, Remex Studio; contact placeholders; atelier-adjacent human tone; forbids
-- [ ] sitemap lists the six routes; design notes paper/ink, no purple/neon; person-not-company
-- [ ] ops/BACKLOG lists P0–P6; ops/STATUS phase P0; ops/HANDOFF filled
-- [ ] No Chinese in ship surfaces; no link from this site claiming studio inbound (studio must not link here — N/A this repo)
-- [ ] Commit message exact: `chore(repo): initialize personal site`
+- [ ] `/` shows: name **Justin Jia**; role **AI Product Manager**; hero **verbatim** `I design AI agents as products — after years building the systems they have to live on.`; sub **Founder, Remex Studio.**
+- [ ] Outbound link to Remex Studio (https://remex-atelier.vercel.app) — label clear, opens studio; this is outbound only
+- [ ] CTAs: **Read the path** → `/path` and **View selected work** → `/work`
+- [ ] No skill bars, no report-card / resume checklist UI
+- [ ] Site chrome (nav) covers the six routes without clutter; English only
+- [ ] Paper/ink tokens expanded enough for home; type roles readable at 375 and 1280 intent
+- [ ] `pnpm build` passes; focus-visible on interactive links
+- [ ] Commit: `feat(site): add home layout and hero`
 
 SKILLS TO USE (read before code):
 - frontend-design
 - emil-design-eng
-- apple-design (always for any UI touch)
+- apple-design (always)
 - writing-guidelines
 - web-design-guidelines
-- Next.js App Router skills as needed
 
-COMMIT MESSAGE: chore(repo): initialize personal site
+COMMIT MESSAGE: feat(site): add home layout and hero
 
-CONTENT LOCKS (seed into docs only this slice):
-- Hero (verbatim, for later P1): I design AI agents as products — after years building the systems they have to live on.
-- Sub: Founder, Remex Studio.
-- Email: hello@remexstudio.com
-- LinkedIn: https://www.linkedin.com/in/justin-jia (label placeholder)
-- X: @QinlinJ (text ok)
-- GitHub: https://github.com/qinlinj and https://github.com/remexstudio
-- Studio outbound later: https://remex-atelier.vercel.app (and study paths)
+COPY LOCKS:
+- Hero must match brand.md character-for-character (including the em dash).
+- Do not invent employers, dates, or percentages on home.
