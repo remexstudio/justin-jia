@@ -6,7 +6,7 @@
 
 ## SHA
 
-(stamp after commit)
+`7f2e98883309991a82afcdd85e3083075b631f3d` (`7f2e988`) — `feat(work): add selected work and studio outbound links`
 
 ## Skills used
 
