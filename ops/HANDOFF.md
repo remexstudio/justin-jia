@@ -6,7 +6,7 @@
 
 ## SHA
 
-(pending commit — filled after push)
+ () — 
 
 ## Skills used
 
