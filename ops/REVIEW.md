@@ -1,26 +1,18 @@
-# Review P1
+# Review P2
 
-- TASK ID: P1
-- Delivery SHA: 6d98fe281c2fefc77b66ce879bd7b8f3683d7e43
-- Tip: 3cf31d5
+- TASK ID: P2
+- Delivery SHA: 8d44e875c119db8ac2b305623ae42583b9cb1715
+- Tip: 7c1425a
 
 ## Acceptance
 
 | Criterion | Result |
 | --- | --- |
-| Name + AI Product Manager | PASS |
-| Hero verbatim (em dash) | PASS |
-| Founder, Remex Studio → remex-atelier.vercel.app | PASS |
-| CTA Read the path / View selected work | PASS |
-| Six-route chrome; focus-visible; skip link | PASS |
-| No skill bars / scorecards / Chinese / purple | PASS |
+| `/now` Remex Studio + AI PM + not cloud-migration outsourcing | PASS |
+| English UI only (no 机羽云) | PASS |
+| `/path` four beats; no employers/dates | PASS |
+| No skill bars / Chinese / fake % | PASS |
 | `pnpm build` | PASS |
-| remex-atelier untouched | PASS |
-
-## Notes
-
-- Preview still unlinked; acceptable until P5/P6 deploy.
-- Letter tone (Literata) correctly differs from studio chrome.
 
 ## Verdict
 
