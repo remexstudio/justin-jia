@@ -6,7 +6,7 @@
 
 ## SHA
 
-Pending stamp after `feat(site): add contact and metadata` lands on origin/main.
+`ddfd42d03325bc19a534ea3a465cb3b7b078fc53` (`ddfd42d`) — `feat(site): add contact and metadata`
 
 ## Skills used
 
