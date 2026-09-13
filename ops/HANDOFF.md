@@ -1,4 +1,4 @@
-# HANDOFF — P3
+# HANDOFF — P4
 
 ## DEV verdict
 
@@ -6,51 +6,45 @@
 
 ## SHA
 
-`7f2e98883309991a82afcdd85e3083075b631f3d` (`7f2e988`) — `feat(work): add selected work and studio outbound links`
+`PENDING` — stamped after push
 
 ## Skills used
 
-- frontend-design (letter measure continuity; stacked rule sections instead of SaaS card grid/shadows; no tracked eyebrows or skill bars; Literata hierarchy matches /now /path)
-- emil-design-eng (reuse existing `.cta` press/hover; no entrance stagger; no decorative motion on content)
-- apple-design (readable leading/measure ~42ch, sentence-case labels, focus via shared chrome, reduced-motion already on CTAs)
-- writing-guidelines (active voice; no em dashes; no easy/simple/quick; no Lead PM / fake tenure; clear outbound anchor text)
-- web-design-guidelines (semantic `h1`/`h2`/`dl`/`article`, `rel="noopener noreferrer"` + `target="_blank"` on outbound studies, `translate="no"` on Remex Studio)
+- frontend-design (letter measure continuity; stacked rule sections instead of card grid/shadows; no tracked eyebrows; Literata hierarchy matches /work /path /now)
+- emil-design-eng (reuse existing `.cta` press/hover; no entrance stagger; no decorative motion on notes)
+- apple-design (readable leading/measure ~42ch, sentence-case headings, focus via shared chrome, reduced-motion already on CTAs)
+- writing-guidelines (active voice; no em dashes; no easy/simple/quick; no fake employment; judgment tone, not listicle)
+- web-design-guidelines (semantic `h1`/`h2`/`article`/`ul`, single index page, clear CTA anchor text)
 
 ## What shipped
 
-- `/work`: four selected-work cards (Problem / Constraints / What shipped / Next cut)
-- Page framing: Product work directed at Remex Studio (studio studies, not employment claims)
-- Card 1 Beauty try-on to checkout → lumen-atelier
-- Card 2 Warehouse knowledge with approval gates → northline
-- Card 3 Morning brief, not a dashboard → kite
-- Card 4 Ecommerce exception queue → paperline
-- One Kafka capability line on card 4 only
-- Clear outbound link text: View studio study
-- `docs/sitemap.md` marks `/work` P3 shipped
+- `/writing`: three short English judgment notes on one index page (no MDX)
+- Note 1: When you should not build an Agent
+- Note 2: Approval gates are the product
+- Note 3: How systems experience constrains Agents
+- Page framing: Short notes on judgment. Not a blog.
+- CTA to `/work`
+- `docs/sitemap.md` marks `/writing` P4 shipped
 - Ops backlog/status/handoff updated
 
 ## Acceptance
 
-- [x] Four cards with Problem / Constraints / What shipped / Next cut
-- [x] Framing: Product work directed at Remex Studio (not employment)
-- [x] Card 1 → https://remex-atelier.vercel.app/work/lumen-atelier
-- [x] Card 2 → https://remex-atelier.vercel.app/work/northline
-- [x] Card 3 → https://remex-atelier.vercel.app/work/kite
-- [x] Card 4 → https://remex-atelier.vercel.app/work/paperline
-- [x] Kafka capability line on card 4 only (not a fifth card)
-- [x] No real brand logos; anonymized product language; clear link text
+- [x] `/writing` lists 2–3 English judgment notes with readable bodies (three shipped)
+- [x] Tone: letter / judgment, not LinkedIn listicle or "unleash AI"
+- [x] No fake employment claims; no Chinese UI; no purple/neon chrome
+- [x] Health-monitoring not claimed (not mentioned)
 - [x] `pnpm build` passes; measure readable at 375/1280 intent (`max-w-2xl`, ~42ch)
-- [x] Commit: `feat(work): add selected work and studio outbound links`
+- [x] Commit: `feat(writing): add two judgment notes`
 
 ## Risks / blockers
 
 - **Preview**: Vercel project still unlinked; Leader visual review may need local or later deploy.
-- Card 2 public title follows TASK warehouse framing while the studio study titles as ledger clerk; content aligns on citations + Propose/Approve gates.
-- Outbound studies open in a new tab; if Leader prefers same-tab, one-line change.
+- Commit message says "two" notes; page ships **three** short notes per TASK preference (three short over two long).
+- Notes are index-only; no per-note routes. Add routes later only if Leader asks.
 
 ## Out of scope (confirmed untouched)
 
 - remex-atelier
-- Home /now /path chrome beyond consuming shared header/footer
-- /writing, /contact polish, motion/404 (P4–P6)
+- Home /now /path /work chrome beyond consuming shared header/footer
+- /contact polish, motion/404 (P5–P6)
 - Phone, Chinese UI, purple/neon, skill bars, fake metrics, Lead PM titles
