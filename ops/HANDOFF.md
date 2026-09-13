@@ -1,4 +1,4 @@
-# HANDOFF — P5
+# HANDOFF — P6
 
 ## DEV verdict
 
@@ -6,44 +6,56 @@
 
 ## SHA
 
-`ddfd42d03325bc19a534ea3a465cb3b7b078fc53` (`ddfd42d`) — `feat(site): add contact and metadata`
+`PENDING` — `feat(site): motion a11y 404 and polish`
 
 ## Skills used
 
-- frontend-design (letter measure; stacked rule rows, not card grid/shadows; no tracked eyebrows; email is the one loud CTA)
-- emil-design-eng (reuse `.cta` press/hover; no entrance stagger; no toast)
-- apple-design (sentence-case headings, ~42ch quiet line, ink focus ring via shared chrome, reduced-motion already on CTAs)
-- writing-guidelines (active voice; no em dashes; no easy/simple/quick; no phone; LinkedIn labeled placeholder; resume honesty)
-- web-design-guidelines (semantic `h1`/`dl`, skip link, focus-visible, named anchors not bare URLs)
-- ask-sonner: N/A (mailto-only; no copy toast)
+- review-animations (transform/opacity only; ease-out press; no entrance cascade; reduced-motion drops vestibular transform)
+- emil-design-eng (160ms press scale 0.97; hover gated; no transition:all; skip-link opacity fallback)
+- apple-design (focus-visible ink ring; skip to #main; reduced motion gentler not zero)
+- frontend-design (404 letter tone; same measure/chrome; no card stub)
+- web-design-guidelines (focus-visible, skip link, semantic headings, transform/opacity motion)
+- webapp-testing (local Playwright six routes + 404 + skip; prod alias smoke)
 
 ## What shipped
 
-- `/contact`: email mailto, LinkedIn placeholder, both GitHubs, X handle as text, PDF coming
-- Root metadata: title/description, Open Graph, Twitter, `metadataBase` https://justin-jia.vercel.app
-- File deploy under qinlinj-projects as project `justin-jia`
-- `docs/sitemap.md` marks `/contact` P5 shipped
-- Ops backlog/status/handoff updated
+- Site-wide motion polish: CTA press transform only; studio-link opacity hover; nav color hover; skip-link transform with reduced-motion opacity fallback
+- `:focus-visible` on interactive controls; `#main` focusable for skip link
+- English 404 in letter chrome (SiteHeader/SiteFooter via root layout; Back home CTA)
+- README: voice, stack, routes, contact placeholders, preview URL, `repo_no_access` deploy caveat
+- `docs/design.md` motion P6; `docs/sitemap.md` not-found shipped
+- Prod redeploy aliased to https://justin-jia.vercel.app
 
 ## Acceptance
 
-- [x] `/contact` lists email, LinkedIn (placeholder), GitHub qinlinj + remexstudio, X @QinlinJ
-- [x] No phone; resume is “PDF coming” (no file invented)
-- [x] Root metadata + `metadataBase` for public URL
-- [x] Preview/production: https://justin-jia.vercel.app (file deploy). Git link blocked (`repo_no_access`)
-- [x] Labels / focus-visible / English only
-- [x] `pnpm build` passes
-- [x] Commit: `feat(site): add contact and metadata`
+- [x] Motion: transform/opacity only; ease-out; restrained press/hover; prefers-reduced-motion site-wide
+- [x] focus-visible on interactive controls; skip link works
+- [x] 404 English letter tone with header/footer consistency
+- [x] Six routes + not-found build; Playwright/smoke local + prod
+- [x] README production-ready
+- [x] DoD self-check table below
+- [x] Commit: `feat(site): motion a11y 404 and polish`
+
+## DoD self-check
+
+| Criterion | Result |
+| --- | --- |
+| Six routes English (`/` `/now` `/path` `/work` `/writing` `/contact`) | PASS |
+| Real name Justin Jia | PASS |
+| Hero verbatim: “I design AI agents as products — after years building the systems they have to live on.” | PASS |
+| Studio outbound only (personal → remex-atelier; no remex-atelier inbound touched) | PASS |
+| No fake titles / phone / fake resume PDF | PASS |
+| 375 / 1280 intent (nav wrap vs baseline; lede clamp) | PASS |
+| English README (voice, stack, routes, preview, deploy caveat, contact placeholders) | PASS |
+| Motion a11y + letter 404 | PASS |
 
 ## Risks / blockers
 
-- **Git auto-deploy blocked**: `create_git_project` and `vercel git connect` fail with `repo_no_access`. Vercel auth is qinlinj; repo is remexstudio/justin-jia. qinlinj needs write/admin, or a remexstudio team, before pushes deploy themselves.
-- First CLI deploy created the project and assigned production. Future CLI deploys without `--prod` are previews unless Git is linked.
-- LinkedIn URL is labeled placeholder; do not treat it as verified.
+- **Git auto-deploy blocked**: `repo_no_access` for qinlinj on remexstudio/justin-jia. Prod refreshed via `npx vercel deploy --prod --yes` (file deploy). Pushes still need manual/CLI redeploy until Git link works.
+- LinkedIn URL remains labeled placeholder.
 
 ## Out of scope (confirmed untouched)
 
 - remex-atelier
-- Home /now /path /work /writing chrome beyond consuming shared header/footer
-- Motion / 404 polish (P6)
-- Phone, Chinese UI, purple/neon, skill bars, fake resume PDF, sonner
+- New routes or content rewrites beyond polish
+- Phone, Chinese UI, purple/neon, fake PDF, decorative entrance cascades

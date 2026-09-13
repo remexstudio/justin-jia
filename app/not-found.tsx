@@ -1,15 +1,22 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Page not found",
+  description: "That address is not on Justin Jia’s site.",
+};
 
 export default function NotFound() {
   return (
-    <main className="mx-auto flex min-h-dvh max-w-2xl flex-col justify-center px-6 py-16">
-      <h1 className="text-2xl tracking-tight text-ink">Page not found</h1>
-      <p className="mt-2 text-sm text-ink-muted">
-        That path does not exist.{" "}
-        <Link href="/" className="underline underline-offset-4 hover:text-ink">
+    <main className="mx-auto w-full max-w-2xl px-6 pt-12 sm:pt-20">
+      <h1 className="letter-name">Page not found</h1>
+      <p className="letter-quiet mt-2 sm:max-w-[42ch]">
+        That address is not on this site. The letter still starts at home.
+      </p>
+      <p className="mt-10 sm:mt-12">
+        <Link href="/" className="cta">
           Back home
         </Link>
-        .
       </p>
     </main>
   );

@@ -43,15 +43,18 @@ At 375 the nav wraps under the name. At 1280 the name and the five routes share 
 
 ## Motion
 
-P1 keeps motion to press and hover. Press scales a CTA to `0.97` over 160ms with `--ease-out`. Hover is gated behind `@media (hover: hover) and (pointer: fine)`. `prefers-reduced-motion: reduce` drops transform. Broader motion waits for P6.
+Transform and opacity only. Strong ease-out (`--ease-out: cubic-bezier(0.23, 1, 0.32, 1)`). CTA press scales to `0.97` over 160ms. Hover feedback is gated behind `@media (hover: hover) and (pointer: fine)`. No entrance cascades.
+
+`prefers-reduced-motion: reduce` drops vestibular transforms site-wide (press scale, skip-link slide). Skip link falls back to opacity. Color and opacity feedback may remain.
 
 ## Accessibility
 
-- Skip link targets `#main`
-- `:focus-visible` ink ring, 2px / 3px offset, on links
+- Skip link targets `#main` (focusable via `tabIndex={-1}`)
+- `:focus-visible` ink ring, 2px / 3px offset, on interactive controls
 - `lang="en"`
 - `aria-current="page"` on the matching nav item
 - Brand names use `translate="no"`
+- 404 uses the same header/footer chrome and letter tone
 
 ## Forbids
 

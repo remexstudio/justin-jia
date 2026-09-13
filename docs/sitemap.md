@@ -10,6 +10,6 @@ Six English routes plus a not-found surface.
 | `/work` | Selected work + studio outbound | P3 shipped |
 | `/writing` | Judgment notes | P4 shipped |
 | `/contact` | Email and profiles | P5 shipped |
-| `not-found` | English 404 | P0 minimal, P6 polish |
+| `not-found` | English 404 in letter chrome | P6 shipped |
 
 No other public routes in scope through P6.

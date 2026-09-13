@@ -59,6 +59,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+#main {
+  scroll-margin-top: 1rem;
+}
+
 .letter-lede {
   font-optical-sizing: auto;
   font-size: clamp(1.375rem, 0.95rem + 2vw, 2rem);
@@ -104,7 +108,8 @@ a {
 a[href]:focus-visible,
 button:focus-visible,
 summary:focus-visible,
-[role="button"]:focus-visible {
+[role="button"]:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 3px;
 }
@@ -125,10 +130,7 @@ summary:focus-visible,
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
-  transition:
-    transform var(--duration-press) var(--ease-out),
-    text-decoration-thickness var(--duration-ui) ease,
-    color var(--duration-ui) ease;
+  transition: transform var(--duration-press) var(--ease-out);
 }
 
 .cta:active {
@@ -140,9 +142,7 @@ summary:focus-visible,
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
-  transition:
-    text-decoration-thickness var(--duration-ui) ease,
-    color var(--duration-ui) ease;
+  transition: opacity var(--duration-ui) var(--ease-out);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -150,9 +150,12 @@ summary:focus-visible,
     color: var(--ink);
   }
 
-  .cta:hover,
-  .studio-link:hover {
+  .cta:hover {
     text-decoration-thickness: 2px;
+  }
+
+  .studio-link:hover {
+    opacity: 0.72;
   }
 }
 
@@ -164,6 +167,7 @@ summary:focus-visible,
   padding: 0.4rem 0.7rem;
   background: var(--paper);
   color: var(--ink);
+  text-decoration: none;
   transform: translateY(-160%);
   transition: transform var(--duration-ui) var(--ease-out);
 }
@@ -177,11 +181,11 @@ summary:focus-visible,
   outline-offset: 3px;
 }
 
+/* Site-wide: drop vestibular transform; keep opacity/color feedback */
 @media (prefers-reduced-motion: reduce) {
   .cta,
   .nav-link,
-  .studio-link,
-  .skip-link {
+  .studio-link {
     transition: none;
   }
 
@@ -193,6 +197,7 @@ summary:focus-visible,
     opacity: 0;
     transform: none;
     pointer-events: none;
+    transition: opacity var(--duration-ui) var(--ease-out);
   }
 
   .skip-link:focus {

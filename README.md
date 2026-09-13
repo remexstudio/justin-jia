@@ -4,6 +4,10 @@ Personal site for Justin Jia: AI Product Manager in Bellevue, Washington. Founde
 
 Recruiter-facing depth to LinkedIn. Not a second company site.
 
+## Voice
+
+English letter tone. Person, not company. Paper and ink. Calm and specific over hype. Ship UI is English only.
+
 ## Stack
 
 - Next.js App Router
@@ -27,7 +31,15 @@ pnpm start
 
 ## Routes
 
-`/` `/now` `/path` `/work` `/writing` `/contact`
+| Path | Purpose |
+| --- | --- |
+| `/` | Home: name, role, locked hero, studio outbound |
+| `/now` | Current focus |
+| `/path` | Trajectory |
+| `/work` | Selected work + studio outbound |
+| `/writing` | Judgment notes |
+| `/contact` | Email and profiles |
+| (not-found) | English 404 in the same chrome |
 
 ## Contact
 
@@ -41,7 +53,7 @@ pnpm start
 
 Production alias: https://justin-jia.vercel.app (qinlinj-projects / file deploy).
 
-Git link of remexstudio/justin-jia is blocked: Vercel user qinlinj lacks write/admin on that repo (`repo_no_access`). Pushes to GitHub do not auto-deploy until that access exists.
+Git link of remexstudio/justin-jia is blocked: Vercel user qinlinj lacks write/admin on that repo (`repo_no_access`). Pushes to GitHub do not auto-deploy until that access exists. Redeploy with `npx vercel deploy --prod --yes` under qinlinj auth when needed.
 
 ## Docs
 
