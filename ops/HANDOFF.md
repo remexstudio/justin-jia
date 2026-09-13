@@ -6,7 +6,7 @@
 
 ## SHA
 
-Pending first product commit; stamped after push in docs(ops) if needed.
+`255162689ba5818cbfc2515bfa69ef57cf13619c` (`2551626`) — `chore(repo): initialize personal site`
 
 ## Skills used
 
