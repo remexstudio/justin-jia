@@ -6,7 +6,7 @@
 
 ## SHA
 
- () — 
+`8d44e875c119db8ac2b305623ae42583b9cb1715` (`8d44e87`) — `feat(site): add now and path`
 
 ## Skills used
 
