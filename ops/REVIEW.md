@@ -1,17 +1,17 @@
-# Review P2
+# Review P3
 
-- TASK ID: P2
-- Delivery SHA: 8d44e875c119db8ac2b305623ae42583b9cb1715
-- Tip: 7c1425a
+- TASK ID: P3
+- Delivery SHA: 7f2e98883309991a82afcdd85e3083075b631f3d
+- Tip: 3b9d16c
 
 ## Acceptance
 
 | Criterion | Result |
 | --- | --- |
-| `/now` Remex Studio + AI PM + not cloud-migration outsourcing | PASS |
-| English UI only (no 机羽云) | PASS |
-| `/path` four beats; no employers/dates | PASS |
-| No skill bars / Chinese / fake % | PASS |
+| Four cards Problem/Constraints/What shipped/Next cut | PASS |
+| Framing Product work directed at Remex Studio | PASS |
+| Outbound lumen / northline / kite / paperline | PASS |
+| No Lead PM / fake titles; Kafka only card 4 | PASS |
 | `pnpm build` | PASS |
 
 ## Verdict
