@@ -1,21 +1,20 @@
-# Review P4
+# Review P5
 
-- TASK ID: P4
-- Delivery SHA: 6ac603b30910e9c7deabe427ab8482ae83f66659
-- Tip: 701cfc9
+- TASK ID: P5
+- Delivery SHA: ddfd42d03325bc19a534ea3a465cb3b7b078fc53
+- Tip: 21df7b3
+- Preview: https://justin-jia.vercel.app
 
 ## Acceptance
 
 | Criterion | Result |
 | --- | --- |
-| 2–3 English judgment notes (three shipped) | PASS |
-| Topics: when not to build / gates are product / systems constrain | PASS |
-| Judgment tone; no Chinese / fake titles / unleash-slop | PASS |
+| Contact: email, LinkedIn placeholder, GitHubs, X | PASS |
+| No phone; PDF coming | PASS |
+| metadataBase + OG/Twitter | PASS |
+| Live alias routes 200 | PASS |
+| Git auto-deploy blocker documented | PASS |
 | `pnpm build` | PASS |
-
-## Notes
-
-- Commit message says “two”; three short notes matches TASK preference. Acceptable.
 
 ## Verdict
 

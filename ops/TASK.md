@@ -1,39 +1,40 @@
-# TASK P5
+# TASK P6
 
-TASK ID: P5
+TASK ID: P6
 REPO: remexstudio/justin-jia
-GOAL: Ship polished `/contact` and site-wide metadata / Open Graph. Contact is reachability only — no phone, no fake resume PDF.
+GOAL: Final polish — restrained motion, a11y pass, atelier-adjacent 404, production README sanity, redeploy preview if needed. Close personal DoD.
 
 ALLOWED FILES:
-- app/contact/page.tsx
-- app/layout.tsx (metadataBase, OG/Twitter defaults)
-- app/page.tsx / other pages only if metadata exports needed
-- components/** (contact helpers; toast if ask-sonner applies)
-- docs/sitemap.md
-- README.md (light refresh: contact placeholders + preview note if deploy lands)
-- ops/HANDOFF.md, ops/STATUS.md, ops/BACKLOG.md (handoff only)
-- public/** (og image optional; keep simple)
+- app/globals.css
+- app/not-found.tsx
+- app/layout.tsx (a11y only if needed)
+- components/** (motion/a11y polish only)
+- README.md (production English README complete)
+- docs/design.md, docs/sitemap.md
+- ops/HANDOFF.md, ops/STATUS.md, ops/BACKLOG.md (handoff; mark P6 done; DoD self-check)
+- No new routes
 
 OUT OF SCOPE:
-- Motion / 404 atelier polish (P6)
-- Phone numbers; generating a fake resume PDF (write “PDF coming” if no real file)
-- Changes to remexstudio/remex-atelier
-- Chinese UI; purple/neon
+- New pages or content rewrites beyond polish
+- Changes to remexstudio/remex-atelier (must remain without personal inbound links)
+- Phone, fake PDF, Chinese UI, purple/neon
+- Decorative entrance cascades
 
 ACCEPTANCE:
-- [ ] `/contact` lists: email `hello@remexstudio.com`; LinkedIn https://www.linkedin.com/in/justin-jia labeled **placeholder**; GitHub https://github.com/qinlinj and https://github.com/remexstudio; X `@QinlinJ` as text OK
-- [ ] No phone; if no resume file: “PDF coming” (do not invent titles in a PDF)
-- [ ] Root metadata: title/description/OG sensible for Justin Jia AI Product Manager; `metadataBase` set when a public URL exists, else document deferral
-- [ ] If Vercel deploy possible from this box: production or preview URL recorded in HANDOFF; if not, state blocker clearly (qinlinj vs remexstudio auth)
-- [ ] Labels / focus for any interactive mailto or links; English only
-- [ ] `pnpm build` passes
-- [ ] Commit: `feat(site): add contact and metadata`
+- [ ] Motion: transform/opacity only; ease-out; press/hover restrained; `prefers-reduced-motion` respected site-wide
+- [ ] `:focus-visible` on interactive controls; skip link works
+- [ ] 404 English, matches letter tone (not bare create-next stub)
+- [ ] Six routes + not-found build; smoke locally; live alias still green after redeploy if you push prod
+- [ ] README production-ready: stack, routes, voice, preview URL, deploy caveat, contact placeholders
+- [ ] DoD self-check table in HANDOFF (six routes English; real name; hero verbatim; studio outbound only; no fake titles; 375/1280 intent; English README)
+- [ ] Commit: `feat(site): motion a11y 404 and polish`
 
 SKILLS TO USE (read before code):
-- ask-sonner (only if a toast/copy feedback is truly needed; skip if mailto-only)
+- review-animations
+- webapp-testing
 - web-design-guidelines
-- apple-design (always for UI)
-- writing-guidelines
+- apple-design (always)
+- emil-design-eng
 - frontend-design
 
-COMMIT MESSAGE: feat(site): add contact and metadata
+COMMIT MESSAGE: feat(site): motion a11y 404 and polish
