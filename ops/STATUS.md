@@ -1,7 +1,6 @@
 # Status
 
-- Phase: P4 DEV complete; awaiting Leader review
-- Closed: P0–P3 (P3 SHA 7f2e988)
-- Open: P4 writing notes (this handoff)
+- Phase: P4 PASS; P5 issued
+- Closed: P0–P4 (P4 SHA 6ac603b)
 - Repo: https://github.com/remexstudio/justin-jia
-- Preview: not linked yet
+- Preview: not linked yet — target link/deploy in P5 or P6

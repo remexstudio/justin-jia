@@ -1,18 +1,21 @@
-# Review P3
+# Review P4
 
-- TASK ID: P3
-- Delivery SHA: 7f2e98883309991a82afcdd85e3083075b631f3d
-- Tip: 3b9d16c
+- TASK ID: P4
+- Delivery SHA: 6ac603b30910e9c7deabe427ab8482ae83f66659
+- Tip: 701cfc9
 
 ## Acceptance
 
 | Criterion | Result |
 | --- | --- |
-| Four cards Problem/Constraints/What shipped/Next cut | PASS |
-| Framing Product work directed at Remex Studio | PASS |
-| Outbound lumen / northline / kite / paperline | PASS |
-| No Lead PM / fake titles; Kafka only card 4 | PASS |
+| 2–3 English judgment notes (three shipped) | PASS |
+| Topics: when not to build / gates are product / systems constrain | PASS |
+| Judgment tone; no Chinese / fake titles / unleash-slop | PASS |
 | `pnpm build` | PASS |
+
+## Notes
+
+- Commit message says “two”; three short notes matches TASK preference. Acceptable.
 
 ## Verdict
 
